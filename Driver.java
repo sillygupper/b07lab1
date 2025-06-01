@@ -1,16 +1,19 @@
 public class Driver {
     public static void main(String [] args) {
-    Polynomial p = new Polynomial();
-    System.out.println(p.evaluate(3));
-    double [] c1 = {6,0,0,5};
-    Polynomial p1 = new Polynomial(c1);
-    double [] c2 = {0,-2,0,0,-9};
-    Polynomial p2 = new Polynomial(c2);
-    Polynomial s = p1.add(p2);
-    System.out.println("s(0.1) = " + s.evaluate(0.1));
-    if(s.hasRoot(1))
-    System.out.println("1 is a root of s");
-    else
-    System.out.println("1 is not a root of s");
+   // System.out.println("smol bupper");
+    Polynomial p = new Polynomial(new double[]{6,-2,5,3}, new int[]{0,1,3,11});
+    Polynomial g = new Polynomial(new double[]{1,-1}, new int[]{2, 0});
+    Polynomial one = new Polynomial(new double[]{1,2,4}, new int[]{1,2,4});
+    Polynomial guh = p.add(g);
+  //  System.out.println(g.evaluate(0));
+   // System.out.println(guh.evaluate(0));
+    Polynomial two = one.multiply(one);
+   // two.PrintStuff();
+    Polynomial pg = p.multiply(g);
+  //  pg.PrintStuff();
+    Polynomial text = new Polynomial("polytext.txt");
+    text.saveToFile("polyout.txt");
+
+    //text.PrintStuff();
     }
-    }
+}
